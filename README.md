@@ -2,10 +2,6 @@
 
 # *Interactive Form*
 
-### <img src="C:\Users\mstur\Desktop\Treehouse\FSJS\Unit-03\interactive-form-v3\interactive-form-v3\FSJS-Teschdegree-Project-3-Interactive-Form\img\treehouse-seeklogo.com.svg" alt="https://teamtreehouse.com" style="zoom:25%;" />
-
-FSJS Techdegree Student Project
-
 ------
 
 
@@ -29,6 +25,4 @@ Using vanilla JavaScript only, the user's interactivity with a form is augmented
 - #### [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)
 
 ------
-
-[^Treehouse Logo. 29 May 2021. Used by Treehouse Full Stack JavaScript student Matthew S. Turner]: Treehouse Logo
 
