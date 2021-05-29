@@ -4,8 +4,7 @@
 
 const cvvNumberElement = document.querySelector("#cvv");
 const paymentMenu = document.getElementById("payment").value;
-const inputs = document.querySelectorAll("input");
-const selects = document.querySelectorAll("select");
+const activitiesClass = document.querySelectorAll(".activities input");
 const formElement = document.querySelector("form");
 
 /*---------------------------
@@ -110,7 +109,6 @@ registration();
 function activities() {
     //Handler show/hides selected activities that have a time conflict
     document.querySelector(".activities").addEventListener("change", (e) => {
-        const activitiesClass = document.querySelectorAll(".activities input");
         const clicked = e.target;
         const clickedType = clicked.getAttribute("data-day-and-time");
 
@@ -283,13 +281,13 @@ const formValdiation = (e) => {
 ---------------------------*/
 
 function focusBlur () {
-    //handler changes focus and blur based on user for all "input" and
-    //"select" Elements, bubble to control class addition/removal with
+    //handler changes focus and blur based on user input for all
+    //"checkbox" Elements, bubble to control class addition/removal with
     //spread method for DRY coding
-    [...inputs, ...selects].forEach((input) => {
-        input.addEventListener("focus", (e) => input.parentElement.classList.add("focus"));
+    [...activitiesClass].forEach((checkbox) => {
+        checkbox.addEventListener("focus", (e) => checkbox.parentElement.classList.add("focus"));
 
-        input.addEventListener("blur", (e) => {
+        checkbox.addEventListener("blur", (e) => {
         const status = document.querySelector(".focus");
 
         if (status) status.classList.remove("focus");
