@@ -11,7 +11,7 @@ Using vanilla JavaScript only, the user's interactivity with a form is augmented
 
 
 - Customized conditional behavior and interactivity
-- Validation provides error messaging to increase accessibility based user input
+- Validation provides error messaging to increase accessibility based on user input
 - CVV field offers real time validation that reports why validation fails
 
 
