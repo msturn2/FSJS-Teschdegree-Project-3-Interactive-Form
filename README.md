@@ -2,7 +2,7 @@
 
 # *Interactive Form*
 
-### ![https://teamtreehouse.com](C:\Users\mstur\Pictures\ClipartKey_757429.png)
+### ![https://www.clipartkey.com/view/TmRmwT_treehouse-logo-png-teamtreehouse-logo-png/](C:\Users\mstur\Desktop\Treehouse\FSJS\Unit-03\interactive-form-v3\interactive-form-v3\FSJS-Teschdegree-Project-3-Interactive-Form\img\ClipartKey_757429.png)
 
 FSJS Techdegree Student Project
 
