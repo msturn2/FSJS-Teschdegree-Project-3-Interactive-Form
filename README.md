@@ -22,11 +22,11 @@ Using vanilla JavaScript only, the user's interactivity with a form is augmented
 
 ## Languages
 
-- #### JavaScript
+- #### [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 
-- #### CSS
+- #### [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)
 
-- #### HTML
+- #### [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)
 
 ------
 
