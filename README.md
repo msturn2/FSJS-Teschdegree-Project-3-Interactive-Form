@@ -1,5 +1,5 @@
 # FSJS Techdegree Project 2
-##_Interactive Form_
+## _Interactive Form_
 
 [!(https://www.clipartkey.com/view/TmRmwT_treehouse-logo-png-teamtreehouse-logo-png/)]
 
