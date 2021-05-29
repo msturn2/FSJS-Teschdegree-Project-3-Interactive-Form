@@ -6,7 +6,7 @@
 
 
 
-Using vanilla JavaScript only, the user's interactivity with a form is augmented to allow registration to a hypothetical conference.  Writing my own scripting, I was able to manipulate the starter HTML and CSS code to create user-friendly experience by:
+Using vanilla JavaScript only, the user's interactivity with a form is augmented to allow registration for a hypothetical conference.  Writing my own JavaScript, I was able to manipulate the starter HTML and CSS code to create user-friendly experience by:
 
 
 
