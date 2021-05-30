@@ -3,7 +3,7 @@
 ---------------------------*/
 
 const cvvNumberElement = document.querySelector("#cvv");
-const paymentMenu = document.getElementById("payment").value;
+const paymentMenu = document.getElementById("payment");
 const activitiesClass = document.querySelectorAll(".activities input");
 const formElement = document.querySelector("form");
 
@@ -32,12 +32,8 @@ function showJobRole() {
     //hides the textarea for all other selections
     titleJobRole.addEventListener("input", (e) => {
         let role = e.target;
-        
-        if (role.value === "other") {
-            otherJobRole.style.display = "";
-        } else {
-            otherJobRole.style.display = "none";
-        }
+        //used ternary to shorten code
+        (role.value === "other") ? otherJobRole.style.display = "" : otherJobRole.style.display = "none";
     });
 }
 showJobRole();
@@ -83,7 +79,7 @@ function registration() {
     
     //Event handler tabulates $ amount of selected activites to display
     //to the user
-    activities.addEventListener("input", (e) => {     
+    activities.addEventListener("input", () => {     
         let totalCost = 0;  
         const activityOptions = document.getElementById("activities-box").children;
 
@@ -117,14 +113,13 @@ function activities() {
 
             //enable/disables conflicting activities
             if (clickedType === checkboxType && clicked !== activitiesClass[i]) {
-                if (clicked.checked) {
-                    activitiesClass[i].disabled = true;
-                } else {
-                    activitiesClass[i].disabled = false;
-                }
+                clicked.checked ? activitiesClass[i].disabled = true : 
+                activitiesClass[i].disabled = false;
             }
         } //Helper function that bubbles in order to add/remove cllass
-        [...activitiesClass].forEach(checkbox => (checkbox.disabled) ? checkbox.parentElement.classList.add("disabled") : checkbox.parentElement.classList.remove("disabled"));
+        [...activitiesClass].forEach(checkbox => (checkbox.disabled) ? 
+        checkbox.parentElement.classList.add("disabled") : 
+        checkbox.parentElement.classList.remove("disabled"));
     });
 }
 activities();
@@ -136,7 +131,6 @@ activities();
 //toggles payment otpions and shows/hides selected payment choice and 
 //any further options that pertain to payment type
 function paymentMethod() {
-    const paymentMenu = document.getElementById("payment");
     const creditCardPayment = document.getElementById("credit-card");
     const paypalPayment = document.getElementById("paypal");
     const bitcoinPayment = document.getElementById("bitcoin");
@@ -235,7 +229,7 @@ const formValidationMessage = (id, class1, class2, display = "") => {
 //conditional manages required fields and if corresponding user action
 //required
 const formValdiation = (e) => {
-        
+
     if (!nameValidator()) {
         e.preventDefault();
         formValidationMessage("name", "valid", "not-valid", "block");
@@ -258,8 +252,8 @@ const formValdiation = (e) => {
     }
 
     //only validates when credit card is selected as payment type
-    if (paymentMenu === "credit-card") {
-        
+    if (paymentMenu.value === "credit-card") {
+
         if (!ccNumberValidator()) {
             e.preventDefault();
             formValidationMessage("cc-num", "valid", "not-valid", "block");
@@ -273,6 +267,13 @@ const formValdiation = (e) => {
         } else {
             formValidationMessage("zip", "not-valid", "valid");
         }
+
+        if (!cvvNumberValidator()) {
+            e.preventDefault();
+            formValidationMessage("cvv", "valid", "not-valid", "block");
+        } else {
+            formValidationMessage("cvv", "not-valid", "valid");
+        }
     }
 }
 
@@ -285,9 +286,9 @@ function focusBlur () {
     //"checkbox" Elements, bubble to control class addition/removal with
     //spread method for DRY coding
     [...activitiesClass].forEach((checkbox) => {
-        checkbox.addEventListener("focus", (e) => checkbox.parentElement.classList.add("focus"));
+        checkbox.addEventListener("focus", () => checkbox.parentElement.classList.add("focus"));
 
-        checkbox.addEventListener("blur", (e) => {
+        checkbox.addEventListener("blur", () => {
         const status = document.querySelector(".focus");
 
         if (status) status.classList.remove("focus");
@@ -301,8 +302,7 @@ focusBlur();
 ---------------------------*/
 
 //chose input rather than keyup because of some potential issues with
-//keyup method. Also removed CVV validator from Form Validation
-//conditional for DRY
+//keyup method.
 cvvNumberElement.addEventListener("input", (e) => {
     const cvvNum = e.target.value;
     
