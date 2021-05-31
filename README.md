@@ -14,7 +14,8 @@ Using vanilla JavaScript only, the user's interactivity with a form is augmented
 - Validation provides error messaging to increase accessibility based on user input
 - CVV field offers real time validation that reports why validation fails
 
-
+  -  Conditional error messaging reports real time user input and gives hint in order to meet validation
+  - Default error message ques if user leaves field unclicked in
 
 ## Languages
 

@@ -164,11 +164,11 @@ paymentMethod();
          Validators
 ---------------------------*/
 
-//validates name field is letter based up to three names and not
-//an empty field
+//validates name field is letter based with some common name characters
+//, but doesn't allow an empty field
 const nameValidator = () => {
-    const nameElement = document.querySelector("#name").value;
-    const nameIsValid = /^[a-zA-Z]+ ?[a-zA-Z]*? ?[a-zA-Z]*?$/.test(nameElement);
+    const nameElement = document.querySelector("#name").value.trim();
+    const nameIsValid = /^[a-z ,.'-]+$/i.test(nameElement);
 
     return nameIsValid;
 }
